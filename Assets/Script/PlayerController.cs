@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
             // rigid2D.AddForce(new Vector2(speed,0), ForceMode2D.Force);
             // this.gameObject.transform.position += new Vector3(speed,0,0);
         }
+
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            rigid2D.velocity = new Vector2(speed_x_constraint, rigid2D.velocity.y);
+        }
         //向左移動
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -52,20 +57,33 @@ public class PlayerController : MonoBehaviour
             // rigid2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
             // this.gameObject.transform.position -= new Vector3(speed, 0, 0);
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            rigid2D.velocity = new Vector2(-speed_x_constraint, rigid2D.velocity.y);
+        }
 
         //Fire Controller
-        if(Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             //Instantiate從Prefab拉出，並製造物件
             Instantiate(bulletPrefab,this.transform.position,Quaternion.identity);
+            print("普攻");
         }
         //其他按鍵
         if (Input.GetKeyDown(KeyCode.Z))
         {
             print("大招");
         }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            print("小招");
+        }
+        if(Input.GetKey("c") && Input.GetKey("v"))
+        {
+            print("特殊攻擊");
+        }
         //移動速度
-        if(rigid2D.velocity.x > speed_x_constraint)
+        if (rigid2D.velocity.x > speed_x_constraint)
         {
             rigid2D.velocity = new Vector2(speed_x_constraint,rigid2D.velocity.y);
         }
