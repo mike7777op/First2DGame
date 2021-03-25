@@ -78,3 +78,26 @@ Received Import Request.
 Start importing Assets/title.unity using Guid(c2eb7c9b7a1a9444e901b335e48ed584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8bbd73f4e6c7f5b4f7015cca90373a') in 0.013067 seconds
   Import took 0.016116 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000544 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1800 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 143.3 MB.
+System memory in use after: 143.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 2.330084 ms (FindLiveObjects: 0.238654 ms CreateObjectMapping: 0.161664 ms MarkObjects: 1.902727 ms  DeleteObjects: 0.025246 ms)
+
