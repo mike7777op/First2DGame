@@ -1,3 +1,3 @@
 # First2DGame
  2Dpraticegame
- ½m²ßUnity»PC#
+ç·´ç¿’Unity,C#ç¨‹å¼
