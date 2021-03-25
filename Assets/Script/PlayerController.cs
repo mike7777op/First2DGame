@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             print("小招");
         }
-        if(Input.GetKey("c") && Input.GetKey("v"))
+        if(Input.GetKeyDown(KeyCode.C) && Input.GetKeyDown(KeyCode.B))
         {
             print("特殊攻擊");
         }
