@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - Bullet
+  - Portal
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float speed_x_constraint;
     public float jumphigh;
     //血量歸零
+    //static靜態變數,playercontroller都共用同個數值,轉場景時跟著改變
+    //public static int hp = 10;
     public int hp = 0;
     public int max_hp = 0;
     //prefab物件
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
+        //換場景時不消除物件,保留損血
+        DontDestroyOnLoad(this.gameObject);
         //指定Component
         rigid2D = this.gameObject.GetComponent<Rigidbody2D>();
         //初始血量
@@ -103,6 +107,15 @@ public class PlayerController : MonoBehaviour
             //扣血
             hp -= 1;
             // collision.gameObject.SendMessage("ApplyDamage", 10);
+        }
+    }
+    //傳送場景
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Portal")
+        {
+            collision.gameObject.transform.GetComponent<Portal>().ChangeScence();
         }
     }
 }
